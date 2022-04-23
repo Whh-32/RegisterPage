@@ -1,6 +1,6 @@
-# RegesterPage
+# RegisterPage
 
-**Regester page for website**
+**Register page for website**
 
 #### Capabilities:
 
