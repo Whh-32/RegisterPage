@@ -1,0 +1,596 @@
+:root {
+    --color:#283dd9e3;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+ background-color: rgb(255, 255, 255);
+
+}
+
+@font-face {
+    font-family: yekan;
+    src: url(tools/fonts/URWDIN/URWDIN-Thin.ttf);
+}
+
+@font-face {
+    font-family: yekanBold;
+    src: url(tools/fonts/URWDIN/URWDIN-Medium.ttf);
+}
+
+.loading {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    z-index: 5000;
+}
+
+.loading > img {
+    width: 40px;
+    animation: loading 800ms infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+.description {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    width: 41%;
+    height: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+
+}
+
+.description img {
+    position: relative;
+    min-height: 700px;
+
+}
+
+.text {
+    font-family: yekan;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 320px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 80px;
+
+}
+
+.logo {
+    top: 40px;
+
+    background: url(img/OpenAI_Logo.svg.png) no-repeat;
+    background-size: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    filter: invert(1);
+}
+
+.footer {
+    font-family: yekanBold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 10px;
+    color: rgb(241, 233, 233);
+    position: absolute;
+    bottom: 10px;
+}
+
+/***************************** sign up ***************************/
+
+.regester {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 59%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.signUP {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-family: yekanBold;
+
+}
+
+.signUP-container {
+    width: 480px;
+    height: auto;
+}
+
+.title {
+    font-size: 34px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 20px;
+
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.596);
+    margin-bottom: 25px;
+
+}
+
+.line {
+    width: 1px;
+    height: 14px;
+    background-color: rgba(0, 0, 0, 0.171);
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.email {
+    cursor: pointer;
+
+}
+
+.phone {
+    cursor: pointer;
+
+}
+
+.activeOption {
+    color: #283dd9b7;
+
+}
+
+.field {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    margin-bottom: 15px;
+
+}
+
+label {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.473);
+}
+
+.falseLable {
+    color: #d63c3c;
+    
+}
+
+#phone {
+    padding-left: 88px;
+}
+
+.country {
+    position: absolute;
+    left: 15px;
+    top: 41px;
+    height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000a4;
+    line-height: 0px;
+    cursor: pointer;
+}
+
+.countryCode {
+    position: absolute;
+    left: -2px;
+    pointer-events: none;
+}
+
+.country > .icon {
+    display: block;
+    margin-left: 35px;
+    width: 14px;
+    height: 14px;
+    background: url(img/icons8-collapse-arrow-30.png) no-repeat;
+    background-size: cover;
+    transform: rotate(180deg);
+    transition: all 400ms;
+    pointer-events: none;
+}
+
+.country > .icon.activeIcon {
+    transform: rotate(0deg);
+}
+
+.email-input {
+    display: none;
+
+}
+
+input {
+    height: 45px;
+    border: none;
+    background-color: rgb(236, 236, 236);
+    border-radius: 4px;
+    outline: none;
+    padding: 0 10px;
+    font-size: 16px;
+    font-family: yekanBold;
+    color: rgba(0, 0, 0, 0.473);
+
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.253);
+    font-family: yekanBold;
+    font-size: 16px;
+}
+
+input:hover {
+    outline: 1px solid rgba(0, 0, 0, 0.144);
+
+}
+
+input:focus {
+    outline: 1px solid var(--color);
+
+}
+
+.inputFalse {
+    outline: 1px solid #d63c3c !important;
+
+}
+
+.erorr {
+    color: #d63c3c;
+    font-size: 12px;
+    margin-top: 6px;
+    display: none;
+
+}
+
+.em {
+    display: flex;
+}
+
+.em > input {
+    width: 395px;
+
+}
+
+.sendCode {
+    position: relative;
+    overflow: hidden;
+    font-family: yekan;
+    width: 80px;
+    height: 45px;
+    background-color: var(--color);
+    border-radius: 4px;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    flex-flow: row;
+    margin-left: 8px;
+    cursor: pointer;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.effect {
+    display: flex;
+    position: absolute;
+    border-radius: 50%;
+    width: 0px;
+    min-height: 0px;
+    background-color: #1418505b;
+    opacity: 0;
+    transition: all ease-in 300ms;
+
+}
+
+.effectActive {
+    width: 85px;
+    min-height: 85px;
+    opacity: 1;
+}
+
+.showPass {
+    width: 18px;
+    height: 18px;
+    background: url(img/icons8-hide-24.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: 15px;
+    top: 43px;
+    cursor: pointer;
+
+}
+
+.showPassActive {
+    background: url(img/icons8-eye-24.png) no-repeat;
+    background-size: cover;
+
+}
+
+.referral {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.473);
+    cursor: pointer;
+
+}
+
+.icon {
+    display: block;
+    margin-left: 5px;
+    width: 14px;
+    height: 14px;
+    background: url(img/icons8-collapse-arrow-30.png) no-repeat;
+    background-size: cover;
+    transform: rotate(0deg);
+    transition: all 400ms;
+
+}
+
+.iconActive {
+    transform: rotate(180deg);
+}
+
+.referral:hover {
+    color: var(--color);
+    
+}
+
+.checkBox {
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.651);
+    font-size: 14px;
+    margin-top: 20px;
+
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    outline: none;
+    width: 16px;
+    height: 16px;
+
+}
+
+.checkBox > div > span {
+    color: #3546c5a1;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: all 500ms;
+
+}
+
+.checkBox > div > span:hover {
+    color: #3545c2e7;
+
+}
+
+.submit {
+    font-family: yekan;
+    width: 100%;
+    height: 45px;
+    background-color: #3241b3;
+    border: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 900;
+    cursor: pointer;
+
+}
+
+
+
+/********************************** select Country css *************************/
+
+
+
+.jss694 {
+    top: 85px;
+    left: 0px;
+    width: 240px;
+    height: 350px;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    box-shadow: rgb(1 8 30 / 16%) -3px 0px 4px 0px, rgb(1 8 30 / 16%) -1px 0px 24px 0px;
+    border-radius: 4px;
+    z-index: 1000;
+    display: none;
+
+}
+
+.jss794 {
+    display: flex;
+}
+
+.MuiBox-root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlayItem {
+    width: 100%;
+    cursor: pointer;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-between;
+    color: #000000a2;
+}
+
+.overlayItem:hover {
+    background-color: rgb(245, 245, 245);
+    color: #3241b3;
+}
+
+.overlayHeader {
+    display: flex;
+    padding: 0px 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.MuiFilledInput-root {
+    margin-top: 10px;
+}
+
+
+.MuiInputBase-input {
+    font: inherit;
+    color: currentColor;
+    width: 100%;
+    border: 0;
+    height: 40px;
+    margin: 0;
+    display: block;
+    min-width: 0;
+    background: none;
+    animation-name: mui-auto-fill-cancel;
+    letter-spacing: inherit;
+    border-radius: 4px;
+    outline: none;
+    background-color: rgb(247, 247, 247);
+    padding-left: 40px;
+
+
+}
+
+.search_svg__icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    margin-left: 8px;
+}
+
+.overlayBody {
+    height: 300px;
+    padding: 8px 0px;
+    overflow: auto;
+
+}
+
+.show {
+    display: block;
+}
+
+/******************************* custom scroll bar *****************************/
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(100, 100, 100);
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+
+  /********************************** log in *************************/
+  .btnLogin {
+      font-family: yekanBold;
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.486);
+      position: absolute;
+      top: 25px;
+      right: 30px;
+  }
+
+  .btnLogin > span {
+      color: #3040bed2;
+      cursor: pointer;
+  }
+
+  .login {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-family: yekanBold;
+
+}
+
+.login-container {
+    width: 480px;
+    height: auto;
+}
+
+/************************************ media **************************/
+
+  @media (max-width: 880px) {
+    .description {
+        display: none;
+    }
+  }
