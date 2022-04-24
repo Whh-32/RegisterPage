@@ -16,4 +16,4 @@ Click [here](https://user-images.githubusercontent.com/94436346/164910990-43681e
 
 ## demo
 
-https://Whh-32.github.io/RegesterPage
+https://Whh-32.github.io/RegisterPage
